@@ -1,0 +1,4 @@
+numpy==1.16.*
+astropy==3.1.*
+matplotlib==3.*
+-e git+git://github.com/astropy/astroquery.git@ff9403b#egg=astroquery
