@@ -1,3 +1,5 @@
 matplotlib
-https://github.com/astropy/astroquery/archive/master.zip
+astropy
+-e 'git+https://github.com/astropy/astroquery@master#egg=astroquery'
+
 
