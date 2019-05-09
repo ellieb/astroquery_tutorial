@@ -1,5 +1,5 @@
 matplotlib
 astropy
--e 'git+https://github.com/astropy/astroquery@master#egg=astroquery'
+git+https://github.com/astropy/astroquery@master#egg=astroquery
 
 
