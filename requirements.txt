@@ -1,6 +1,6 @@
 matplotlib
 astropy
-cadccutout
 requests
 numpy
--e git+https://github.com/astropy/astroquery#egg=astroquery
+astroquery>=0.3.10.dev0
+cadccutout
