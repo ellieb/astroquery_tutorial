@@ -1,5 +1,6 @@
 matplotlib
 astropy
-git+https://github.com/astropy/astroquery@master#egg=astroquery
-
-
+cadccutout
+requests
+numpy
+-e git+https://github.com/astropy/astroquery#egg=astroquery
