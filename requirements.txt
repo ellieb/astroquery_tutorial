@@ -1,6 +1,5 @@
 matplotlib
 astropy
-requests
 numpy
 astroquery>=0.3.10.dev0
-cadccutout
+pandas
