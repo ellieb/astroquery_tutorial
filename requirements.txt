@@ -3,3 +3,6 @@ astropy
 numpy
 astroquery>=0.3.10.dev0
 pandas
+ipympl
+ipyaladin
+photutils
