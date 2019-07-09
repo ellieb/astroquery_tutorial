@@ -6,3 +6,4 @@ pandas
 ipympl
 ipyaladin
 photutils
+pyvo
