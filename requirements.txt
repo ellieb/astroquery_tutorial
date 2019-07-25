@@ -1,7 +1,7 @@
 matplotlib
 astropy
 numpy
-astroquery>=0.3.10.dev0
+https://github.com/astropy/astroquery/archive/master.zip
 pandas
 ipympl
 ipyaladin
