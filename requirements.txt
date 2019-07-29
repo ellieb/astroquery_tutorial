@@ -13,5 +13,3 @@ photutils
 gvar
 lsqfit
 pp
-https://github.com/thomasorb/orb/archive/master.zip
-https://github.com/thomasorb/orcs/archive/master.zip

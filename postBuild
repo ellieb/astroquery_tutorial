@@ -1,3 +1,6 @@
+python2.7 -m pip install https://github.com/thomasorb/orb/archive/master.zip
+python2.7 -m pip install https://github.com/thomasorb/orcs/archive/master.zip
+
 jupyter contrib nbextension install --user
 jupyter nbextension enable --py widgetsnbextension
 jupyter nbextension enable --py --sys-prefix ipyaladin
