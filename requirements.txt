@@ -1,5 +1,5 @@
 # These will be installed to the python 2 environment
-numpy
+numpy==1.16.4
 scipy
 bottleneck
 matplotlib
