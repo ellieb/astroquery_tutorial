@@ -1,0 +1,10 @@
+# These will be installed to the python 3 environment
+matplotlib
+astropy
+numpy
+https://github.com/astropy/astroquery/archive/master.zip
+pandas
+ipympl
+ipyaladin
+photutils
+pyvo

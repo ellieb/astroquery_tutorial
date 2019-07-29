@@ -1,9 +1,17 @@
+# These will be installed to the python 2 environment
+numpy
+scipy
+bottleneck
 matplotlib
 astropy
-numpy
-https://github.com/astropy/astroquery/archive/master.zip
+Cython
+h5py
+dill
 pandas
-ipympl
-ipyaladin
+pyregion
 photutils
-pyvo
+gvar
+lsqfit
+pp
+https://github.com/thomasorb/orb/archive/master.zip
+https://github.com/thomasorb/orcs/archive/master.zip
