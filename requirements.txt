@@ -2,6 +2,7 @@
 numpy==1.16.4
 requests
 ipywidgets
+pyvo
 https://github.com/astropy/astroquery/archive/master.zip
 scipy
 matplotlib
