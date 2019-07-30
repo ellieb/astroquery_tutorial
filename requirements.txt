@@ -1,7 +1,6 @@
 # These will be installed to the python 2 environment
 numpy==1.16.4
 scipy
-bottleneck
 matplotlib
 astropy
 Cython
@@ -10,6 +9,3 @@ dill
 pandas
 pyregion
 photutils
-gvar
-lsqfit
-pp
