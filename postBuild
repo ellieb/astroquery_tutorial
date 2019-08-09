@@ -2,8 +2,8 @@ python2.7 -m pip install gvar --no-deps
 python2.7 -m pip install lsqfit --no-deps
 python2.7 -m pip install pp --no-deps
 python2.7 -m pip install bottleneck
-python2.7 -m pip install https://github.com/thomasorb/orb/archive/master.zip
-python2.7 -m pip install https://github.com/thomasorb/orcs/archive/master.zip
+python2.7 -m pip install git+https://github.com/thomasorb/orb@master#egg=orb
+python2.7 -m pip install git+https://github.com/thomasorb/orcs@master#egg=orcs
 
 jupyter contrib nbextension install --user
 jupyter nbextension enable --py widgetsnbextension

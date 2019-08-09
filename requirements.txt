@@ -1,15 +1,15 @@
 # These will be installed to the python 2 environment
 numpy==1.16.4
-requests
-ipywidgets
-pyvo
+requests==2.22.0
+ipywidgets==7.5.1
+pyvo==0.9.3
 astroquery>=0.3.10.dev0
-scipy
-matplotlib
-astropy
-Cython
-h5py
-dill
-pandas
-pyregion
-photutils
+scipy==1.2.2
+matplotlib==2.2.4
+astropy==2.0.14
+Cython==0.29.13
+h5py==2.9.0
+dill==0.3.0
+pandas==0.24.2
+pyregion==2.0
+photutils==0.4.1
