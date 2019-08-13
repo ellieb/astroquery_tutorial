@@ -3,7 +3,7 @@ numpy==1.16.4
 requests==2.22.0
 ipywidgets==7.5.1
 pyvo==0.9.3
-astroquery>=0.3.10.dev0
+astroquery==0.3.10
 scipy==1.2.2
 matplotlib==2.2.4
 astropy==2.0.14
@@ -13,3 +13,4 @@ dill==0.3.0
 pandas==0.24.2
 pyregion==2.0
 photutils==0.4.1
+
