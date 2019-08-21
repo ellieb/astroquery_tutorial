@@ -1,17 +1,22 @@
 # Makefile for HTML for Jupyter Notebooks
 
 OUTDIR=html
+NBFILES = $(wildcard *.ipynb)
+HTMLFILES = $(patsubst %.ipynb,%.html,$(NBFILES))
+NBPY3 = $(shell pcregrep -Ml --buffer-size=500K '"language_info": .*(?s).*"version": 3' $(NBFILES))
+NBPY2 = $(shell pcregrep -Ml --buffer-size=500K '"language_info": .*(?s).*"version": 2' $(NBFILES))
+PY3 = $(shell whereis python | grep -o /usr/bin/python3.? | head -1)
 
-nbs = $(wildcard *.ipynb)
-nbs_py3 = $(shell pcregrep -Ml --buffer-size=500K '"language_info": .*(?s).*"version": 3' $(nbs))
-nbs_py2 = $(shell pcregrep -Ml --buffer-size=500K '"language_info": .*(?s).*"version": 2' $(nbs))
-py3 = $(shell whereis python | grep -o /usr/bin/python3.? | head -1)
+NBCONVERT = jupyter nbconvert --output-dir=./$(OUTDIR) --to html
 
-html: $(nbs)
-	@echo TARGET FILES: $^
+html:
+	@echo NOTEBOOK FILES: $(NBFILES)
+	@echo TARGET: $^
+
 	$(eval VENVDIR := $(shell mktemp -d venvtemp.XXX))
 
-	$(py3) -m venv ./$(VENVDIR) ;\
+ifdef NBPY3
+	$(PY3) -m venv ./$(VENVDIR) ;\
 	source ./$(VENVDIR)/bin/activate ;\
 
 	@echo Installing requirements
@@ -20,15 +25,22 @@ html: $(nbs)
 	pip install -r requirements3.txt ;\
 
 	@echo Converting notebooks to HTML
-	jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --output-dir=./$(OUTDIR) --to html $(nbs_py3) ;\
-	jupyter nbconvert --ExecutePreprocessor.timeout=-1 --output-dir=./$(OUTDIR) --to html $(nbs_py2) ;\
+	$(NBCONVERT) $(NBPY3) --ExecutePreprocessor.timeout=-1 --execute
 
 	@echo Shutting down virtural env and removing temp dir
 	deactivate ;\
 	rm -rf ./$(VENVDIR) ;\
 
+endif
+
+ifdef NBPY2
+	$(NBCONVERT) $(NBPY2) ;\
+
+endif 
+
+
 clean:
-	rm -rf $(OUTDIR)
+	rm -rf $(OUTDIR) ;\
 
 help: 
 	@echo "make"
