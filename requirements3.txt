@@ -1,7 +1,7 @@
 # These will be installed to the python 3 environment
 matplotlib==3.1.1
 astropy==4.0
-numpy==1.19.0
+numpy==1.22.0
 astroquery==0.4.6
 pandas==0.25.0
 ipympl==0.3.3
