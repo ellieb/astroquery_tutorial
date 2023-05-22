@@ -1,6 +1,6 @@
 # These will be installed to the python 2 environment
 numpy==1.16.4
-requests==2.22.0
+requests==2.31.0
 ipywidgets==7.5.1
 pyvo==0.9.3
 --pre astroquery==0.3.10.*
